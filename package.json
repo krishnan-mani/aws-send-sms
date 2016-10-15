@@ -1,0 +1,19 @@
+{
+  "name": "send-sms",
+  "version": "1.0.0",
+  "description": "Send SMS using AWS SNS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha"
+  },
+  "keywords": [
+    "SMS",
+    "AWS"
+  ],
+  "author": "Krishnan M",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.6.9"
+  }
+}
