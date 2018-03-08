@@ -3,6 +3,8 @@ Using the AWS SNS service to send SMS (text messages) with the SDK for node.js
 - Provide the cell number and a `senderID` (11-character alphanumeric) as the first and second argument.
 
 ```
+# Make IAM credentials available, say by exporting a profile as an environment variable
+$ export AWS_PROFILE=me@account-1
 $ cd /path/to/aws-send-sms 
 $ npm install
 $ node index.js +911234567890 KM123456789
