@@ -8,11 +8,13 @@ https://docs.aws.amazon.com/de_de/sns/latest/dg/sms_supported-countries.html
 var region = 'ap-southeast-1';
 var sns = new AWS.SNS({region: region});
 
-var phoneNumber = '[REPLACE-WITH-MOBILE-NUMBER]'; //e.g. +919812345678, prefix with plus sign
+var phoneNumber = process.argv[2];
+var senderID = process.argv[3];
+console.log("phone number: " + phoneNumber);
 var messageAttributes = {
     "AWS.SNS.SMS.SenderID": {
         DataType: 'String',
-        StringValue: '[REPLACE-WITH-SENDER-ID]' // Upto 11 alphanumeric characters
+        StringValue: senderID // Upto 11 alphanumeric characters
     },
     "AWS.SNS.SMS.SMSType": {
         DataType: 'String',
